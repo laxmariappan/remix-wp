@@ -6,6 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import styles from "./tailwind.css";
 
 
@@ -21,17 +23,44 @@ export const meta = () => ({
 
 export default function App() {
   return (
+    <Document>
+      <Layout>
+        <Outlet />
+      </Layout>
+    </Document >
+  );
+}
+
+function Document({ children }) {
+  return (
     <html lang="en">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
-        <Outlet />
+			<body style={{ margin: '0 2.5vw' }}>
+        {children}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
-  );
+  )
+}
+
+export function Layout({ children }) {
+  return (
+    /* 
+    It is possible to define the Default Layout here. 
+    In that way, all the pages are going to be in the same format.
+    Examples of components to be added here: Toolbar/Navbar, Footer and etc...
+    */
+    <>
+      <Header/>
+      {children}
+      <Footer/>
+    </>
+  )
 }
