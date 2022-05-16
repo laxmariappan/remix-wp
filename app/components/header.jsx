@@ -12,9 +12,8 @@ export default function Header(){
                     {/* logo - end */}
                     {/* nav - start */}
                     <nav className="hidden lg:flex gap-12">
-                      <a href="#" className="text-indigo-500 text-lg font-semibold">Home</a>
-                      <a href="#" className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Blog</a>
-                      <a href="#" className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">About</a>
+                      <a href="/posts" className="text-indigo-500 text-lg font-semibold">Blog</a>
+                      <a href="/about" className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">About</a>
                     </nav>
                     {/* nav - end */}
                     {/* buttons - start */}
