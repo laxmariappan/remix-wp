@@ -2,7 +2,7 @@ export default function Header(){
     return(
         <>
                 {/* hero - start */}
-                <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
+                <div className="bg-white ">
                 <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
                   <header className="flex justify-between items-center py-4 md:py-8 mb-4">
                     {/* logo - start */}
@@ -26,6 +26,7 @@ export default function Header(){
                     </button>
                     {/* buttons - end */}
                   </header>
+                  <hr className="mt-4"></hr>
                 </div>
               </div>
               {/* hero - end */}

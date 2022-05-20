@@ -1,5 +1,6 @@
 import { json } from "@remix-run/node";
-import { useLoaderData, Link } from "@remix-run/react";
+import { useLoaderData, Link, Form } from "@remix-run/react";
+import Sign from "../../components/comments-form";
 export let loader = async ({ params }) => {
 
     const result = await fetch(`https://wordpress.org/news/wp-json/wp/v2/posts?slug=${params.slug}`)
@@ -32,6 +33,7 @@ export default function PostsIndex() {
         <div dangerouslySetInnerHTML={{ __html: data[0].content.rendered }} />
     </div>
     <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <Sign />
     <p className="float-none my-10">
           <Link to="../posts" className="bg-gray-900 text-white p-4 mt-10">Back to posts list</Link>
         </p>

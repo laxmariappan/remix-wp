@@ -1,7 +1,7 @@
 export default function Footer(){
     return(
         <>
-        <div className="bg-white py-6 sm:py-8 lg:py-12">
+        <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
          {/* footer - start */}
          <footer className="bg-white">
           <div className="bg-indigo-500 py-6">

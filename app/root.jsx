@@ -40,7 +40,7 @@ function Document({ children }) {
         <Meta />
         <Links />
       </head>
-			<body style={{ margin: '0 2.5vw' }}>
+			<body className="bg-gray-100">
         {children}
         <ScrollRestoration />
         <Scripts />
