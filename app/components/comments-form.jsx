@@ -1,6 +1,6 @@
 import { Form, useActionData } from "@remix-run/react";
 
-export default function Sign() {
+export default function CommentForm() {
   const actionData = useActionData();
   return (
     <Form
