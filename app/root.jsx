@@ -10,9 +10,8 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import styles from "./tailwind.css";
 
-
 export function links() {
-  return [{ rel: "stylesheet", href: styles }]
+  return [{ rel: "stylesheet", href: styles }];
 }
 
 export const meta = () => ({
@@ -27,7 +26,7 @@ export default function App() {
       <Layout>
         <Outlet />
       </Layout>
-    </Document >
+    </Document>
   );
 }
 
@@ -40,14 +39,14 @@ function Document({ children }) {
         <Meta />
         <Links />
       </head>
-			<body className="bg-gray-100">
+      <body className="bg-gray-100">
         {children}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
-  )
+  );
 }
 
 export function Layout({ children }) {
@@ -58,9 +57,25 @@ export function Layout({ children }) {
     Examples of components to be added here: Toolbar/Navbar, Footer and etc...
     */
     <>
-      <Header/>
+      <Header />
       {children}
-      <Footer/>
+      <Footer />
     </>
-  )
+  );
+}
+
+export function ErrorBoundary({ error }) {
+  console.log(error);
+  return (
+    <Document>
+      <Layout>
+        <section className="p-6">
+          <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
+            <h1>There was an Error</h1>
+            <p>{error.message}</p>
+          </div>
+        </section>
+      </Layout>
+    </Document>
+  );
 }
